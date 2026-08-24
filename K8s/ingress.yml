@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: express-app
+  labels:
+    app: express-app
+  namespace: default
+  annotations: {}
+spec:
+  ingressClassName: nginx
+  rules: 
+    - http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: main-server-service
+                port:
+                  number: 80
