@@ -199,6 +199,12 @@ kubectl logs deployment/express-deployment --tail=100 -f
 
 As traffic increases, pod CPU shoots up past 50%, and Kubernetes automatically creates new pods (up to 10). When traffic stops, it scales back down to 5.
 
+### 📸 Live Demo — Terminal Output
+
+![Terminal commands — HPA, kubectl top, hey load test, and live logs](https://github.com/vivekchanne06-web/Kubernetes/blob/main/Screenshot%202026-08-24%20230922.png)
+
+> Shows (left-to-right): pods scaling under load with `kubectl top`, the `hey` load test summary, and live `kubectl logs` output — all running simultaneously.
+
 ---
 
 ## 📋 Useful Commands
